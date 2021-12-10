@@ -9,7 +9,7 @@ function randomBpm() {
 }
 
 function App() {
-  const [measurements, setMeasurement] = useState([50]);
+  const [measurements, setMeasurement] = useState([0]);
 
   useEffect(() => {
     setInterval(() => {
@@ -22,7 +22,7 @@ function App() {
         }
         return [...prev, obj]
       });
-    }, 2000);
+    }, 1000);
   }, []); 
 
   const measurement = measurements[measurements.length-1];
